@@ -10,9 +10,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class User implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String id;
 	private String name;
@@ -20,9 +20,9 @@ public class User implements Serializable {
 
 	@DBRef(lazy = true)
 	private List<Post> posts = new ArrayList<>();
-	
+
 	public User() {
-		
+
 	}
 
 	public User(String id, String name, String email) {
@@ -56,8 +56,6 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	
-	
 	public List<Post> getPosts() {
 		return posts;
 	}
@@ -90,6 +88,5 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
+
 }

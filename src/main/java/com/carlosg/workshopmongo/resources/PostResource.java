@@ -1,21 +1,13 @@
 package com.carlosg.workshopmongo.resources;
 
-import java.net.URI;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.carlosg.workshopmongo.domain.Post;
-import com.carlosg.workshopmongo.domain.User;
-import com.carlosg.workshopmongo.dto.UserDTO;
 import com.carlosg.workshopmongo.services.PostService;
 
 @RestController
@@ -30,7 +22,5 @@ public class PostResource {
 		Post thisPost = service.findById(id);
 		return ResponseEntity.ok().body(thisPost);
 	}
-
-
 
 }
