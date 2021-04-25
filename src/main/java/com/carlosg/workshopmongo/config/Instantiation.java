@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Configuration;
 
 import com.carlosg.workshopmongo.domain.User;
 import com.carlosg.workshopmongo.repository.UserRepository;
 
+@Configuration
 public class Instantiation implements CommandLineRunner {
 
 	@Autowired
@@ -21,8 +23,9 @@ public class Instantiation implements CommandLineRunner {
 		User maria = new User(null, "Maria Brown", "maria@gmail.com");
 		User alex = new User(null, "Alex Green", "alex@gmail.com");
 		User bob = new User(null, "Bob Grey", "bob@gmail.com");
+		User silvio = new User(null, "Silvio Dias", "dias.s86@gmail.com");
 	
-		userRepository.saveAll( Arrays.asList(maria, alex, bob));
+		userRepository.saveAll( Arrays.asList(maria, alex, bob, silvio));
 	}
 
 }
